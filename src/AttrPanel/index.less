@@ -1,0 +1,31 @@
+.attr-panel {
+  // height: 100%;
+  width: 350px;
+  background-color: #fff;
+  margin-left: 4px;
+  padding: 0 12px 12px 12px;
+  overflow-y: scroll;
+  position: relative;
+
+  // scroll bar style
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: #f5f5f5;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+  }
+
+  &-body {
+    &-head {
+    }
+    &-notice {
+      text-align: center;
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.6);
+      padding: 50px 15px 0;
+    }
+  }
+}

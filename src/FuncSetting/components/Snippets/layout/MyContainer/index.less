@@ -1,0 +1,34 @@
+.tabAttribute {
+  * {
+    font-size: 12px;
+  }
+
+  .ant-form-item-label > label {
+    font-size: 12px;
+  }
+
+  .ant-divider-horizontal.ant-divider-with-text {
+    margin: 0 0 8px 0;
+  }
+}
+
+
+.event-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 24px;
+  padding: 0 16px;
+  margin-bottom: 10px;
+  &-action {
+    visibility: hidden;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: #f1f2f5;
+    & .event-item-action {
+      visibility: visible;
+    }
+  }
+
+}

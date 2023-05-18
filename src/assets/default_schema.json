@@ -1,0 +1,283 @@
+{
+  "pageConfig": {
+    "deviceType": "mobile",
+    "dataSource": ["1"],
+    "variables": [
+      {
+        "id": "detailId",
+        "type": "params"
+      },
+      {
+        "id": "detail",
+        "type": "model",
+        "dataSourceId": "1",
+        "methodId": "1",
+        "params": {
+          "activityId": "$page.state.params.detailId"
+        }
+      }
+    ]
+  },
+  "pageSetting": {},
+  "pageHeader": null,
+  "pageContent": [
+    {
+      "i": "div_VbNGmTt6",
+      "key": "div_VbNGmTt6",
+      "name": "MyContainer",
+      "category": "layout",
+      "title": "Container",
+      "value": "Drag and drop components or templates here",
+      "styles": {
+        "display": "block"
+      },
+      "attrs": {},
+      "listeners": [],
+      "children": [
+        {
+          "i": "image_Xnowlw0L",
+          "key": "image_Xnowlw0L",
+          "name": "MyImage",
+          "category": "basic",
+          "title": "Image",
+          "styles": {
+            "display": "inline-block",
+            "width": "100%",
+            "height": "200px",
+            "backgroundSizeWidth": {
+              "unit": "px"
+            },
+            "backgroundSizeHeight": {
+              "unit": "px"
+            }
+          },
+          "attrs": {
+            "src": "http://h5.dooring.cn/uploads/image_176b4b2ad03.png",
+            "fieldId": "image_Xnowlw0L"
+          }
+        }
+      ]
+    },
+    {
+      "i": "div_rtXK8z9i",
+      "key": "div_rtXK8z9i",
+      "name": "MyContainer",
+      "category": "layout",
+      "title": "Container",
+      "value": "Drag and drop components or templates here",
+      "styles": {
+        "display": "flex",
+        "width": {},
+        "height": {},
+        "top": {},
+        "bottom": {},
+        "left": {},
+        "right": {},
+        "marginTop": {},
+        "marginBottom": {},
+        "marginLeft": {},
+        "marginRight": {},
+        "paddingTop": {},
+        "paddingBottom": {},
+        "paddingLeft": {},
+        "paddingRight": {},
+        "fontSize": {},
+        "lineHeight": {},
+        "fillType": "none",
+        "borderType": "whole",
+        "borderRadiusType": "whole",
+        "boxShadow": {
+          "x": {},
+          "y": {},
+          "blur": {},
+          "spread": {}
+        },
+        "justifyContent": "space-around"
+      },
+      "attrs": {},
+      "listeners": [],
+      "children": [
+        {
+          "i": "div_U3zFvEMy",
+          "key": "div_U3zFvEMy",
+          "name": "MyContainer",
+          "category": "layout",
+          "title": "Container",
+          "value": "Drag and drop components or templates here",
+          "styles": {
+            "display": "block",
+            "width": {
+              "value": null,
+              "unit": "px"
+            },
+            "height": {
+              "value": null
+            },
+            "top": {},
+            "bottom": {},
+            "left": {},
+            "right": {},
+            "marginTop": {},
+            "marginBottom": {},
+            "marginLeft": {},
+            "marginRight": {},
+            "paddingTop": {},
+            "paddingBottom": {},
+            "paddingLeft": {},
+            "paddingRight": {},
+            "fontSize": {},
+            "lineHeight": {},
+            "fillType": "none",
+            "borderType": "whole",
+            "borderRadiusType": "whole",
+            "boxShadow": {
+              "x": {},
+              "y": {},
+              "blur": {},
+              "spread": {}
+            }
+          },
+          "attrs": {},
+          "listeners": [],
+          "children": [
+            {
+              "i": "image_s8Re7OGP",
+              "key": "image_s8Re7OGP",
+              "name": "MyImage",
+              "category": "basic",
+              "title": "Image",
+              "styles": {
+                "display": "inline-block",
+                "width": {
+                  "value": 156,
+                  "unit": "px"
+                },
+                "height": {
+                  "value": 162,
+                  "unit": "px"
+                },
+                "top": {},
+                "bottom": {},
+                "left": {},
+                "right": {},
+                "marginTop": {},
+                "marginBottom": {},
+                "marginLeft": {},
+                "marginRight": {},
+                "paddingTop": {},
+                "paddingBottom": {},
+                "paddingLeft": {},
+                "paddingRight": {},
+                "fontSize": {},
+                "lineHeight": {},
+                "fillType": "none",
+                "borderType": "whole",
+                "borderRadiusType": "whole",
+                "boxShadow": {
+                  "x": {},
+                  "y": {},
+                  "blur": {},
+                  "spread": {}
+                }
+              },
+              "attrs": {
+                "src": "http://h5.dooring.cn/uploads/image_176b4b5f141.png",
+                "fieldId": "image_s8Re7OGP"
+              }
+            }
+          ]
+        },
+        {
+          "i": "div_AStt1EPC",
+          "key": "div_AStt1EPC",
+          "name": "MyContainer",
+          "category": "layout",
+          "title": "Container",
+          "value": "Drag and drop components or templates here",
+          "styles": {
+            "display": "block"
+          },
+          "attrs": {},
+          "listeners": [],
+          "children": [
+            {
+              "i": "image_OT6sziUU",
+              "key": "image_OT6sziUU",
+              "name": "MyImage",
+              "category": "basic",
+              "title": "Image",
+              "styles": {
+                "display": "block",
+                "width": {
+                  "value": 172,
+                  "unit": "px"
+                },
+                "height": {
+                  "value": 126,
+                  "unit": "px"
+                },
+                "top": {},
+                "bottom": {},
+                "left": {},
+                "right": {},
+                "marginTop": {},
+                "marginBottom": {},
+                "marginLeft": {},
+                "marginRight": {},
+                "paddingTop": {},
+                "paddingBottom": {},
+                "paddingLeft": {},
+                "paddingRight": {},
+                "fontSize": {},
+                "lineHeight": {},
+                "fillType": "none",
+                "borderType": "whole",
+                "borderRadiusType": "whole",
+                "boxShadow": {
+                  "x": {},
+                  "y": {},
+                  "blur": {},
+                  "spread": {}
+                }
+              },
+              "attrs": {
+                "src": "http://h5.dooring.cn/uploads/image_176b4b67c23.png",
+                "fieldId": "image_OT6sziUU"
+              }
+            },
+            {
+              "i": "text_DL3nsdbs",
+              "key": "text_DL3nsdbs",
+              "name": "MyText",
+              "category": "basic",
+              "title": "Text",
+              "value": "Text",
+              "styles": {
+                "width": {},
+                "height": {},
+                "top": {},
+                "bottom": {},
+                "left": {},
+                "right": {},
+                "fontSize": {},
+                "lineHeight": {},
+                "textAlign": "center",
+                "marginTop": {
+                  "unit": "px",
+                  "value": 10
+                },
+                "marginBottom": {},
+                "marginLeft": {},
+                "marginRight": {}
+              },
+              "attrs": {
+                "content": "$page.state.detail.data.name"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pageFooter": null
+}

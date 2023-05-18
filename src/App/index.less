@@ -1,0 +1,59 @@
+.app {
+  flex: 1;
+
+  &-root {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 378px;
+    box-shadow: 0 2px 10px 0 rgba(31, 56, 88, 0.15);
+    transform: translateX(-50%);
+    background-color: #fff;
+    overflow-y: scroll;
+    z-index: 10;
+
+    // scroll bar style
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+      background-color: #f5f5f5;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 6px;
+    }
+
+    &-content {
+      &-placeholder {
+        height: 100%;
+        min-height: 60px;
+        width: 100%;
+        background-color: #f0f0f0;
+        border: 1px dotted;
+        color: #a7b1bd;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        justify-content: center;
+      }
+      &-item {
+        &:hover {
+          outline: 1px dashed #197aff;
+          outline-offset: -1px;
+          background: rgba(0, 121, 242, 0.2);
+          z-index: 1;
+        }
+      }
+
+      &-selected {
+        outline: 2px solid #197aff;
+        outline-offset: -2px;
+        z-index: 1;
+      }
+      &-selected:hover {
+        outline: 2px solid #197aff;
+      }
+    }
+  }
+}

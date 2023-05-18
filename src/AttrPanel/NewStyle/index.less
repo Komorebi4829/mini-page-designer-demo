@@ -1,0 +1,48 @@
+.newStyle {
+  .flex {display: flex;}.hidden {display: none;}.flex-row {flex-direction: row;}.flex-row-reverse {flex-direction: row-reverse;}.flex-col {flex-direction: column;}.flex-col-reverse {flex-direction: column-reverse;}.flex-wrap {flex-wrap: wrap;}.flex-wrap-reverse {flex-wrap: wrap-reverse;}.flex-no-wrap {flex-wrap: nowrap;}.items-start {align-items: flex-start;}.items-end {align-items: flex-end;}.items-center {align-items: center;}.items-baseline {align-items: baseline;}.items-stretch {align-items: stretch;}.self-auto {align-self: auto;}.self-start {align-self: flex-start;}.self-end {align-self: flex-end;}.self-center {align-self: center;}.self-stretch {align-self: stretch;}.justify-start {justify-content: flex-start;}.justify-end {justify-content: flex-end;}.justify-center {justify-content: center;}.justify-between {justify-content: space-between;}.justify-around {justify-content: space-around;}.justify-evenly {justify-content: space-evenly;}.content-center {align-content: center;}.content-start {align-content: flex-start;}.content-end {align-content: flex-end;}.content-between {align-content: space-between;}.content-around {align-content: space-around;}.flex-1 {flex: 1 1 0%;}.flex-auto {flex: 1 1 auto;}.flex-initial {flex: 0 1 auto;}.flex-none {flex: none;}.flex-grow-0 {flex-grow: 0;}.flex-grow {flex-grow: 1;}.flex-shrink-0 {flex-shrink: 0;}.flex-shrink {flex-shrink: 1;}
+
+  & * {
+    font-size: 12px;
+  }
+
+  .ant-collapse > .ant-collapse-item > .ant-collapse-header {
+    padding: 6px 0;
+  }
+  .ant-collapse-ghost > .ant-collapse-item > .ant-collapse-content > .ant-collapse-content-box {
+    padding: 0 4px 4px 4px;
+  }
+
+  &-item {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid #f5f5f5;
+    &-wholeSetting {
+      border-bottom: 1px dashed #f5f5f5;
+    }
+    &-title {
+      font-weight: bold;
+    }
+
+    &-settingAll {
+      width: 176px;
+    }
+  }
+
+  &-smallItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    margin-top: 4px;
+  }
+
+  .upload-btn:hover {
+    cursor: pointer;
+    color: #6891f7;
+  }
+}
+
+.designer-dropdown.ant-select-dropdown .ant-select-item {
+  font-size: 12px;
+}

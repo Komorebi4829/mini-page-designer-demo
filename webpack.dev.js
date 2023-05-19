@@ -23,7 +23,7 @@ for (const key in baseConfig.entry) {
   if (Array.isArray(baseConfig.entry[key])) {
     baseConfig.entry[key].push(
       require.resolve('webpack/hot/dev-server'),
-      `${require.resolve('webpack-dev-server/client')}?http://localhost:${PORT}`,
+      `${require.resolve('webpack-dev-server/client')}?http://localhost:${PORT}`
     )
   }
 }
@@ -46,12 +46,17 @@ module.exports = merge(baseConfig, {
     // new BundleAnalyzerPlugin()
   ],
   devServer: {
-    host: '127.0.0.1',
+    host: '0.0.0.0',
     open: false,
     port: PORT,
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
+    static: {
+      directory: path.resolve(__dirname, 'public'),
+      publicPath: '/',
+    },
+    compress: true,
     historyApiFallback: true,
     hot: true,
     static: path.resolve(__dirname, './src'),

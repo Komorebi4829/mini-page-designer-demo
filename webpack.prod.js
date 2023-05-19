@@ -2,6 +2,7 @@ var baseConfig = require('./webpack.base')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var MiniCssExtractPlugin = require('mini-css-extract-plugin')
 var path = require('path')
+var CopyWebpackPlugin = require('copy-webpack-plugin')
 var { merge } = require('webpack-merge')
 var { CleanWebpackPlugin } = require('clean-webpack-plugin')
 var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
@@ -39,6 +40,9 @@ module.exports = merge(baseConfig, {
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       openAnalyzer: false,
+    }),
+    new CopyWebpackPlugin({
+      patterns: [{ from: path.resolve(__dirname, 'public'), to: path.resolve(__dirname, 'dist') }],
     }),
   ],
   optimization: {

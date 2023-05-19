@@ -86,9 +86,3 @@ export async function queryDataSourcesList() {
     total: 1,
   }
 }
-
-/*
-http://h5.dooring.cn/uploads/image_176b4b2ad03.png
-http://h5.dooring.cn/uploads/image_176b4b5f141.png
-http://h5.dooring.cn/uploads/image_176b4b67c23.png
-*/

@@ -16,19 +16,7 @@ import {
   SettingOutlined,
 } from '@ant-design/icons'
 import React, { useState, useEffect } from 'react'
-import {
-  Button,
-  message,
-  Select,
-  Menu,
-  Tooltip,
-  Space,
-  Modal,
-  Input,
-  Popconfirm,
-  Typography,
-  Divider,
-} from 'antd'
+import { Button, message, Select, Menu, Tooltip, Space, Modal, Input, Popconfirm, Typography, Divider } from 'antd'
 import copyTOClipboard from 'copy-text-to-clipboard'
 import ReactJson from 'react-json-view'
 import { saveAs } from 'file-saver'
@@ -63,17 +51,15 @@ const Index = (props) => {
     setInitLoading(true)
     queryAppPageById({ id }).then((res) => {
       let json = res.pageJson || '{}'
-      json = localStorage.getItem('json') || json
+      // json = localStorage.getItem('json') || json
       const type = 1
       json = JSON.parse(json)
       dispatch({ type: 'pageEditor/setInitData', payload: { json } })
       // Get data source details
       json?.pageConfig?.dataSource?.length > 0 &&
-        Promise.all(json?.pageConfig?.dataSource?.map((id) => queryAppDataById({ id: id }))).then(
-          (arr) => {
-            dispatch({ type: 'pageEditor/onCacheDataSource', payload: arr })
-          },
-        )
+        Promise.all(json?.pageConfig?.dataSource?.map((id) => queryAppDataById({ id: id }))).then((arr) => {
+          dispatch({ type: 'pageEditor/onCacheDataSource', payload: arr })
+        })
       setInitLoading(false)
     })
 
@@ -281,74 +267,52 @@ const Index = (props) => {
   }
 
   return (
-    <div className="top-area">
-      <div className="top-area-common top-area-left">
+    <div className='top-area'>
+      <div className='top-area-common top-area-left'>
         <Space>
           <Typography.Title level={3}>Mini Page Designer Demo</Typography.Title>
         </Space>
       </div>
-      <div className="top-area-common top-area-center">
+      <div className='top-area-common top-area-center'>
         <Tooltip title={'Import JSON'}>
-          <Button
-            type="link"
-            onClick={() => setimportDataModal(true)}
-            icon={<ImportOutlined rotate={-90} />}
-          ></Button>
+          <Button type='link' onClick={() => setimportDataModal(true)} icon={<ImportOutlined rotate={-90} />}></Button>
         </Tooltip>
         <Tooltip title={'View JSON'}>
-          <Button type="link" onClick={viewJson} icon={<EyeOutlined />}></Button>
+          <Button type='link' onClick={viewJson} icon={<EyeOutlined />}></Button>
         </Tooltip>
         <Tooltip title={'Copy JSON'}>
-          <Button type="link" onClick={copyJson} icon={<CopyOutlined />}></Button>
+          <Button type='link' onClick={copyJson} icon={<CopyOutlined />}></Button>
         </Tooltip>
         <Tooltip title={'Download JSON'}>
-          <Button type="link" onClick={downloadJson} icon={<DownloadOutlined />}></Button>
+          <Button type='link' onClick={downloadJson} icon={<DownloadOutlined />}></Button>
         </Tooltip>
-        <Tooltip title="Undo">
-          <Button
-            type="link"
-            onClick={undohandler}
-            icon={<UndoOutlined />}
-            disabled={!editor.pageContent.length}
-          ></Button>
+        <Tooltip title='Undo'>
+          <Button type='link' onClick={undohandler} icon={<UndoOutlined />} disabled={!editor.pageContent.length}></Button>
         </Tooltip>
-        <Tooltip title="Redo">
-          <Button type="link" onClick={redohandler} icon={<RedoOutlined />}></Button>
+        <Tooltip title='Redo'>
+          <Button type='link' onClick={redohandler} icon={<RedoOutlined />}></Button>
         </Tooltip>
         <Popconfirm
-          title="Are you sure to clear the data?"
+          title='Are you sure to clear the data?'
           open={clearDataVisible}
           onConfirm={() => clearLayoutData()}
           onCancel={() => setclearDataVisible(false)}
         >
-          <Button
-            type="link"
-            style={{ marginRight: '9px' }}
-            onClick={() => setclearDataVisible(true)}
-            icon={<DeleteOutlined />}
-          ></Button>
+          <Button type='link' style={{ marginRight: '9px' }} onClick={() => setclearDataVisible(true)} icon={<DeleteOutlined />}></Button>
         </Popconfirm>
 
-        <Divider type="vertical" />
-        <Tooltip title="Data sources">
-          <Button
-            type="link"
-            onClick={() => setdataSourceModal(editor.pageConfig.dataSource)}
-            icon={<DatabaseOutlined />}
-          ></Button>
+        <Divider type='vertical' />
+        <Tooltip title='Data sources'>
+          <Button type='link' onClick={() => setdataSourceModal(editor.pageConfig.dataSource)} icon={<DatabaseOutlined />}></Button>
         </Tooltip>
-        <Tooltip title="Variables">
-          <Button
-            type="link"
-            onClick={() => setvariableModal(true)}
-            icon={<PaperClipOutlined />}
-          ></Button>
+        <Tooltip title='Variables'>
+          <Button type='link' onClick={() => setvariableModal(true)} icon={<PaperClipOutlined />}></Button>
         </Tooltip>
       </div>
-      <div className="top-area-common top-area-right">
+      <div className='top-area-common top-area-right'>
         <Space>
-          <Tooltip title="Save">
-            <Button type="primary" onClick={() => onSave()} loading={submitLoading}>
+          <Tooltip title='Save'>
+            <Button type='primary' onClick={() => onSave()} loading={submitLoading}>
               Save
             </Button>
           </Tooltip>
@@ -358,12 +322,12 @@ const Index = (props) => {
       <Modal
         width={'70%'}
         open={showExportModal}
-        title="View JSON"
+        title='View JSON'
         onOk={copySchema}
         onCancel={() => setShowExportModal(false)}
         afterClose={() => setDisplaySchema({})}
-        okText="Copy"
-        cancelText="Cancel"
+        okText='Copy'
+        cancelText='Cancel'
         style={{ marginLeft: '15%' }}
       >
         <ReactJson src={displaySchema} displayDataTypes={false} onEdit={false} name={false} />
@@ -372,11 +336,11 @@ const Index = (props) => {
       <Modal
         width={'50%'}
         open={importDataModal}
-        title="Import JSON"
+        title='Import JSON'
         onOk={onIpmortData}
         onCancel={() => setimportDataModal(false)}
-        okText="Import"
-        cancelText="Cancel"
+        okText='Import'
+        cancelText='Cancel'
         style={{ marginLeft: '15%' }}
       >
         <Input.TextArea
@@ -387,11 +351,7 @@ const Index = (props) => {
         />
       </Modal>
 
-      <DataSource
-        onCancel={() => setdataSourceModal(false)}
-        data={dataSourceModal}
-        onChangeDataSource={onChangeDataSource}
-      />
+      <DataSource onCancel={() => setdataSourceModal(false)} data={dataSourceModal} onChangeDataSource={onChangeDataSource} />
       <Variable
         onCancel={() => setvariableModal(false)}
         data={variableModal}
